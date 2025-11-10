@@ -1,0 +1,17 @@
+﻿{
+  "Name": "glue_transform_orders",
+  "Role": "arn:aws:iam::421845230894:role/GlueRole-ecom-dev",
+  "Command": {
+    "Name": "glueetl",
+    "ScriptLocation": "s3://ecommerce-data-pipeline-aditya/glue-scripts/transform_orders.py",
+    "PythonVersion": "3"
+  },
+  "DefaultArguments": {
+    "--TempDir": "s3://ecommerce-data-pipeline-aditya/glue-temp/",
+    "--job-language": "python",
+    "--enable-metrics": "true"
+  },
+  "GlueVersion": "3.0",
+  "WorkerType": "G.1X",
+  "NumberOfWorkers": 2
+}
